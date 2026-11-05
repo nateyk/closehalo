@@ -4,6 +4,7 @@ import graphene
 from common.graphql import scalars  # noqa: F401
 
 from apps.demo import schema as demo_schema
+from apps.bookkeeping import schema as bookkeeping_schema
 from apps.finances import schema as finances_schema
 from apps.notifications import schema as notifications_schema
 from apps.users import schema as users_schema
@@ -19,6 +20,7 @@ schema = graphene.Schema(
     query=graphql_query(
         [
             demo_schema.Query,
+            bookkeeping_schema.Query,
             notifications_schema.Query,
             users_schema.Query,
             finances_schema.Query,
@@ -32,6 +34,7 @@ schema = graphene.Schema(
     mutation=graphql_mutation(
         [
             demo_schema.Mutation,
+            bookkeeping_schema.Mutation,
             demo_schema.TenantMemberMutation,
             notifications_schema.Mutation,
             users_schema.AnyoneMutation,

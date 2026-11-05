@@ -81,6 +81,7 @@ if TRACING_BACKEND == "xray":
 LOCAL_APPS = [
     "apps.content",
     "apps.demo",
+    "apps.bookkeeping",
     "apps.finances",
     "apps.users",
     "apps.notifications",
